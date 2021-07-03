@@ -88,7 +88,7 @@ public class TouchManager : MonoBehaviour
                 return TouchState.Ended;
             }
 
-            //#else
+#else
             // EDITOR以外
             if (Input.touchCount > 0)
             {
@@ -143,7 +143,7 @@ public class TouchManager : MonoBehaviour
         else if(State == TouchState.Moved)
         {
             _info.deltaScreenPoint = Position - _info.screenPoint;
-            _info.deltaScreenPoint = Position;
+            _info.screenPoint = Position;
             if (_moved != null)
             {
                 _moved(_info);
@@ -152,7 +152,7 @@ public class TouchManager : MonoBehaviour
         else if(State == TouchState.Ended)
         {
             _info.deltaScreenPoint = Position - _info.screenPoint;
-            _info.deltaScreenPoint = Position;
+            _info.screenPoint = Position;
             if (_ended != null)
             {
                 _ended(_info);
