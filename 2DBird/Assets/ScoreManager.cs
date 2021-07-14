@@ -22,6 +22,6 @@ public class ScoreManager : MonoBehaviour
         // テキストの表示を入れ替える
         score_text.text = "Score:" + score_num;
 
-        score_num += 1; // とりあえず1加算し続けてみる
+        score_num += 1; // 1加算し続けてみる
     }
 }
